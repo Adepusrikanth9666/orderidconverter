@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="Author" content="CSA plis All Stars / K-League / J-League / Digital Samurais / 2008-2012" />
+  <meta http-equiv="Content-Language" content="en" />
+  <meta http-equiv="Content-type" content="text/html; charset=windows-1252" />
+  <title>order ID Converter</title>
+  <div class="i">
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/JD_Sports_logo.svg" height="60" width="60" />
+  </div>
+  <br />
+  <h1>Order ID Converter</h1>
+  <br />
+
+  <style type="text/css">
+    body {
+      background-color: wheat;
+    }
+
+    h1 {
+      font-size: 25px;
+      color: black;
+      position: relative;
+      left: 300px;
+      top: 0px;
+    }
+
+    .i {
+      top: 20px;
+      left: 70px;
+    }
+
+    * {
+      font-family: verdana;
+      color: ash;
+      font-size: 10px;
+    }
+
+    textarea {
+      width: 150px;
+      background: white;
+      border: 0px;
+    }
+
+    div {
+      float: left;
+      margin: 2px;
+      padding: 2px;
+    }
+
+    fieldset {
+      -moz-border-radius: 10px;
+      float: left;
+      border: solid 1px #77aadd;
+      margin: 2px;
+      padding: 2px;
+      background: gray;
+    }
+
+    legend {
+      -moz-border-radius: 10px;
+      border: solid gray;
+      background: gray;
+      text-color: black;
+    }
+
+    legend b {
+      color: #fff;
+    }
+  </style>
+  <script language="JavaScript">
+    function testResults(form) {
+      console.log("srikanth")
+      var ctx = form.inputbox.value;
+      var mp = form.mp.value;
+      var mpl =
+        "https://livemesh-control.jdmesh.co/#/commerce/jdsports/orders/";
+      if (mp == "tessuti") {
+        mpl = "https://livemesh-control.jdmesh.co/#/commerce/tessuti/orders/";
+      }
+      if (mp == "DE") {
+        mpl =
+          "https://livemesh-control.jdmesh.co/#/commerce/jdsportsde/orders/";
+      }
+      if (mp == "sizeuk") {
+        mpl = "https://livemesh-control.jdmesh.co/#/commerce/size/orders/";
+      }
+      if (mp == "sizede") {
+        mpl = "https://livemesh-control.jdmesh.co/#/commerce/sizede/orders/";
+      }
+
+      if (mp == "scotts") {
+        mpl =
+          "https://livemesh-control.jdmesh.co/#/commerce/scottsmenswear/orders/";
+      }
+      if (mp == "hip") {
+        mpl =
+          "https://livemesh-control.jdmesh.co/#/commerce/hipstoregb/orders/";
+      }
+      if (mp == "footpatrol") {
+        mpl =
+          "https://livemesh-control.jdmesh.co/#/commerce/footpatrolgb/orders/";
+      }
+      if (mp == "footpatrolde") {
+        mpl =
+          "https://livemesh-control.jdmesh.co/#/commerce/footpatrolde/orders/";
+      }
+      if (mp == "UltimateOutdoors") {
+        mpl = "https://www.ultimateoutdoors.com/aurora/orders/view/";
+      }
+      if (mp == "Blacks") {
+        mpl = "https://www.blacks.co.uk/aurora/orders/view/";
+      }
+      if (mp == "Millets") {
+        mpl = "https://www.millets.co.uk/aurora/orders/view/";
+      }
+      if (mp == "GoOutdoors") {
+        mpl = "https://www.gooutdoors.co.uk/aurora/orders/view/";
+      }
+      if (mp == "flair") {
+        mpl = "https://instore.jdproto.com/index.php?orders=&ordersearch=";
+      }
+
+      // document.write("You typed: " + mpl);
+      document.getElementById("tP2").innerHTML = eval(show(ctx, mpl));
+    }
+
+    function show(ctx, mpl) {
+      var CtxArr = ctx.split("\n");
+      var Lng = CtxArr.length;
+
+      var zmienna =
+        '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Author" content="CSA plis All Stars / K-League / 2008-2010" /><meta http-equiv="Content-Language" content="en" /><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><title>order ID Converter</title>';
+      zmienna +=
+        '<style type="text/css">body { background-color: wheat;} * { font-family: verdana; color: ash; font-size: 10px; } #box { width: 350px; background: white; border: 0px;} div {float: left;  margin: 2px; padding: 2px;} fieldset {-moz-border-radius: 10px; float: left; border: solid 1px #77aadd; margin: 2px; padding: 2px; background: gray;} legend { -moz-border-radius: 10px; border: solid gray; background: gray; text-color: black;} legend b {color: #fff; }</style></head><body>';
+      zmienna +=
+        '<fieldset><legend><b>Clickable links!</b></legend><div id="box">';
+      for (i = 0; i < Lng; i++) {
+        zmienna +=
+          '<a href="' +
+          mpl +
+          CtxArr[i] +
+          "/refunds/new" +
+          '" target="_blank">order ID: ' +
+          CtxArr[i] +
+          "</a><br />";
+      }
+      zmienna += "</div></fieldset>";
+      zmienna += "</body></html>";
+      document.write(zmienna);
+      return "zmienna";
+    }
+  </script>
+</head>
+
+<body>
+  <fieldset>
+    <legend><b>JD UK order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="uk" type="hidden" /><input name"button"="" value="Click!" onclick="testResults(this.form)"
+        type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>JD DE order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="DE" type="hidden" /><input name"button"="" value="Click!" onclick="testResults(this.form)"
+        type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Size UK order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="sizeuk" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Size DE order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="sizede" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Scotts order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="scotts" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Tessuti order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="tessuti" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>HIP order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="hip" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Footpatrol UK order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="footpatrol" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Footpatrol DE order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="footpatrolde" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Ultimate OD order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="UltimateOutdoors" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Blacks order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="Blacks" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Millets order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="Millets" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>Go Outdoors order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="GoOutdoors" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend><b>92 order IDs</b></legend>
+    <form name="myform">
+      <textarea name="inputbox" cols="20" rows="20"></textarea><br />
+      <input name="mp" value="flair" type="hidden" /><input name"button"="" value="Click!"
+        onclick="testResults(this.form)" type="submit">
+    </form>
+  </fieldset>
+
+  <div>
+    <p><a href="mailto:pramod.namala@jdplc.com"> </a></p>
+
+    <p><a>Any Feedback about this tool? Please reach out to:</a></p>
+    <p>
+      <a href="mailto:Pramod.namala@jdplc.com">Pramod.namala@jdplc.com </a>
+    </p>
+  </div>
+  <style>
+    p {
+
+      left: 600px;
+    }
+  </style>
+</body>
+
+</html>
